@@ -6,14 +6,11 @@ pub fn build(b: *std.Build) void {
     const mode = b.option(std.builtin.OptimizeMode, "mode", "") orelse .Debug;
     const disable_llvm = b.option(bool, "disable_llvm", "use the non-llvm zig codegen") orelse false;
 
-    const tracer = b.dependency("tracer", .{ .mode = mode });
-
     const mod = b.addModule("xml", .{
         .root_source_file = b.path("mod.zig"),
         .target = target,
         .optimize = mode,
     });
-    mod.addImport("tracer", tracer.module("tracer"));
 
     {
         const exe = b.addExecutable(.{

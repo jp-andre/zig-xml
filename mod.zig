@@ -6,10 +6,6 @@ const std = @import("std");
 const string = []const u8;
 const Parser = @import("./Parser.zig");
 const log = std.log.scoped(.xml);
-const tracer = @import("tracer");
-
-//
-//
 
 pub fn parse(alloc: std.mem.Allocator, path: string, inreader: *std.Io.Reader) !Document {
     _ = path;
