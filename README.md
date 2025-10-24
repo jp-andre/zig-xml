@@ -1,5 +1,15 @@
 # zig-xml
 
+## This is a fork
+
+This is a quick fork of https://github.com/nektro/zig-xml to fix build for zig 0.15 and remove the tracer.
+
+Cherry-picked changes (with fixups):
+- https://github.com/hilariousppp/zig-xml/commit/e03c26f7b2cb73ca6580b5fa61ae7a9dd876705b
+- https://github.com/zivoy/zig-xml/commit/7ddae38d72202bd50077243f4b89563566ca7147
+
+## Original README contents
+
 ![loc](https://sloc.xyz/github/nektro/zig-xml)
 [![license](https://img.shields.io/github/license/nektro/zig-xml.svg)](https://github.com/nektro/zig-xml/blob/master/LICENSE)
 [![nektro @ github sponsors](https://img.shields.io/badge/sponsors-nektro-purple?logo=github)](https://github.com/sponsors/nektro)
