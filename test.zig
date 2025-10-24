@@ -123,12 +123,13 @@ test { try doValid("xml-test-suite/xmlconf/xmltest/valid/sa/116.xml"); }
 test { try doValid("xml-test-suite/xmlconf/xmltest/valid/sa/117.xml"); }
 test { try doValid("xml-test-suite/xmlconf/xmltest/valid/sa/118.xml"); }
 test { try doValid("xml-test-suite/xmlconf/xmltest/valid/sa/119.xml"); }
+test { try doValid("tiger.svg"); }
 // zig fmt: on
 
 fn doValid(testfile_path: string) !void {
     var testfile_file = try std.fs.cwd().openFile(testfile_path, .{ .mode = .read_only });
     defer testfile_file.close();
-    var buf: [4096]u8 = undefined;
+    var buf: [1000000]u8 = undefined;
     var file_reader = testfile_file.reader(&buf);
     var doc = try xml.parse(std.testing.allocator, testfile_path, &file_reader.interface);
     defer doc.deinit();

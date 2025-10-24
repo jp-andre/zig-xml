@@ -8,6 +8,8 @@ Cherry-picked changes (with fixups):
 - https://github.com/hilariousppp/zig-xml/commit/e03c26f7b2cb73ca6580b5fa61ae7a9dd876705b
 - https://github.com/zivoy/zig-xml/commit/7ddae38d72202bd50077243f4b89563566ca7147
 
+Abandoned since it fails on my test file.
+
 ## Original README contents
 
 ![loc](https://sloc.xyz/github/nektro/zig-xml)
